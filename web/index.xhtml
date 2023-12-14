@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
+    </h:head>
+    <h:body style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <h:form>
+            <p:panelGrid columns="1">
+                <p:outputLabel value="Username" />
+                <p:inputText value="#{adminController.username}" required="true" requiredMessage="Please , Fill the field" id="username"/>
+                <p:message for="username" class="error_message" />
+
+                <p:outputLabel value="Password" />
+                <p:inputText value="#{adminController.password}" required="true" requiredMessage="Please , Fill the field" id="password"/>
+                <p:message for="password" class="error_message" />
+                <p:commandButton value="Login" action="#{adminController.login()}" />
+             
+
+            </p:panelGrid>
+            
+        </h:form>
+    </h:body>
+
+
+
+</html>
